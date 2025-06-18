@@ -6,9 +6,21 @@
 
 ---
 
+## 🎥 Video Walkthrough
+[Watch the Demo](https://res.cloudinary.com/du7a1obsy/video/upload/v1750226393/submit_nvgcaa.mp4)
+
+---
+
 ## 🚀 Overview
 
 **StuMan** is a comprehensive student management system designed specifically for tracking and analyzing competitive programming performance. It integrates with **Codeforces** to provide detailed insights into student progress, contest performance, and problem-solving patterns.
+
+---
+
+## 🔗 Backend Repository
+[View Backend Repository](https://github.com/JAYANTJOSHI001/stuman-server)
+
+---
 
 ---
 
