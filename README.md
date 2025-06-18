@@ -12,6 +12,11 @@
 
 ---
 
+## 🔗 Backend Repository
+[View Backend Repository](https://github.com/JAYANTJOSHI001/stuman-server)
+
+---
+
 ## ✨ Features
 
 - **Student Management**: Add, edit, and delete student profiles
