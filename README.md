@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+# 📘 Student Management System (StuMan)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*A modern web application for managing competitive programming students with Codeforces integration.*
 
-## Available Scripts
+![Screenshot of Student Management System](https://res.cloudinary.com/du7a1obsy/image/upload/v1750224977/Screenshot_2025-06-18_105205_ljyrno.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**StuMan** is a comprehensive student management system designed specifically for tracking and analyzing competitive programming performance. It integrates with **Codeforces** to provide detailed insights into student progress, contest performance, and problem-solving patterns.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Student Management**: Add, edit, and delete student profiles
+- **Codeforces Integration**: Sync and display student performance data from Codeforces
+- **Performance Analytics**:
+  - Rating history visualization
+  - Problem-solving distribution by difficulty
+  - Activity heatmap
+  - Contest performance analysis
+- **Dark Mode Support**: Toggle between light and dark themes
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+``` bash
+client/
+├── public/               # Static assets and HTML template
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── BarChartSolved.jsx    # Problem difficulty distribution chart
+│   │   ├── ChatRating.jsx        # Rating history visualization
+│   │   ├── ContestTable.jsx      # Contest performance table
+│   │   ├── DarkModeToggle.jsx    # Theme switcher component
+│   │   ├── HeatMap.jsx           # Activity visualization
+│   │   ├── Navbar.jsx            # Navigation component
+│   │   └── ThemeCard.jsx         # Theme-aware card component
+│   ├── context/          # React context providers
+│   │   └── ThemeContext.jsx      # Dark mode implementation
+│   ├── pages/            # Application views
+│   │   ├── StudentProfile.jsx    # Detailed student profile
+│   │   └── ThemeShowcase.jsx     # Theme demonstration
+│   ├── router/           # Routing configuration
+│   │   └── AppRoutes.js          # Application routes
+│   ├── services/         # API service layer
+│   │   └── StudentServices.jsx   # Student data API calls
+│   ├── styles/           # Global styles
+│   │   └── global.css            # Global CSS rules
+│   ├── utils/            # Utility functions
+│   ├── App.js            # Main application component
+│   └── index.js          # Application entry point
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind CSS configuration
+└── postcss.config.js     # PostCSS configuration
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Technology Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend Framework**: React 19
+- **Routing**: React Router 7
+- **Styling**: TailwindCSS 3
+- **Charts**: Recharts 2
+- **HTTP Client**: Axios
+- **Notifications**: React Toastify
+- **Build Tool**: Create React App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🌙 Dark Mode Implementation
 
-## Learn More
+- Toggle between light and dark themes
+- Preferences saved using `localStorage`
+- Detects system preference via `prefers-color-scheme`
+- Smooth transitions between themes
+- Theme-aware components with proper color contrast
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📊 Data Visualization
 
-### Code Splitting
+StuMan includes powerful data visualization tools:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Rating History Chart**: Line chart showing rating progression
+- **Problem Distribution Chart**: Bar chart for problems solved by difficulty
+- **Activity Heatmap**: Calendar-style problem-solving activity view
+- **Contest Performance Table**: Detailed view of contest statistics
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Getting Started
 
-### Making a Progressive Web App
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Node.js (v16 or higher)
+- npm or yarn
 
-### Advanced Configuration
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+# Clone the repository
+git clone https://github.com/your-username/student-management-system.git
+cd student-management-system
 
-### Deployment
+# Install frontend dependencies
+cd client
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Install backend dependencies
+cd ../server
+npm install
+```
 
-### `npm run build` fails to minify
+### Start the development server
+```bash
+# Run backend
+cd server
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Run frontend
+cd ../client
+npm start
+Open http://localhost:3000 in your browser.
+```
+
+## 🔄 API Integration
+The frontend communicates with a Node.js/Express backend.
+
+API Endpoints
+- GET /api/students - List all students
+
+- POST /api/students - Add a new student
+
+- PUT /api/students/:id - Update student
+
+- DELETE /api/students/:id - Delete student
+
+- GET /api/students/:id/pro - Get detailed student profile
+
+- POST /api/sync - Sync all students' Codeforces data
+
+## 🧩 Component Architecture
+- StudentProfile: Main profile with analytics
+- ChartRating: Rating history visualization
+- BarChartSolved: Difficulty distribution
+- HeatMap: Activity calendar
+- ContestTable: Contest performance analyzer
+- ThemeContext: Manages dark/light theme
+
+## 🎨 Styling and Design System
+- TailwindCSS with custom configuration
+- Class-based dark mode strategy
+- Smooth transitions between themes
+- Unified color palette for light/dark modes
+- Fully responsive layout for all screen sizes
+
+## 📝 Development Notes
+### Code Conventions
+- Component files: PascalCase (e.g., StudentProfile.jsx)
+- Context providers: PascalCase + Context suffix
+- Service files: PascalCase + Services suffix
+- Utility functions: camelCase
+
+### State Management
+- React Context API: Theme management
+- Component-level state: For UI interactions
+- Data fetching: Via React hooks
+
+## 🔧 Available Scripts
+``` bash
+npm start       # Runs the app in development mode
+npm test        # Launches test runner
+npm run build   # Builds the app for production
+npm run eject   # Ejects CRA configuration
+```
+
+## 📱 Responsive Design
+- Mobile-first layout
+- Tailwind breakpoints for all devices
+- Optimized UI/UX for small and large screens
+- Touch-friendly interactions
+
+## 🔄 Future Enhancements
+- 🔐 User authentication and role-based access
+- 🎨 Additional theme options
+- 📴 Offline support via service workers
+- ⚡ Performance optimization for large datasets
+- 🔍 Advanced filtering and search features
+
+📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+🙌 Credits
+Built with ❤️ by Jayant Joshi
+
